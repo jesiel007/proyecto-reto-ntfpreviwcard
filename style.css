@@ -1,137 +1,150 @@
 :root {
-    --oxford-blue:       hsl(217, 54%, 11%);
-    --light-oxford-blue: hsl(216, 50%, 16%);
-    --indigo-dye:        hsl(215, 32%, 27%);
-    --blue-yonder:       hsl(216, 30%, 55%);
-    --aqua:              hsl(178, 100%, 50%);
-    --white:             hsl(0, 0%, 100%);
-  }
-  
-  
-  * {
-    margin:  0;
+  --Very-dark-blue-main-BG: hsl(217, 54%, 11%);
+  --Very-dark-blue-card-BG: hsl(216, 50%, 16%);
+  --Very-dark-blue-line: hsl(215, 32%, 27%);
+  --Soft-blue: hsl(216, 30%, 55%);
+  --Cyan: hsl(178, 100%, 50%);
+  --white: hsl(0, 0%, 100%);
+}
+ * {
+    margin: 0;
     padding: 0;
     box-sizing: border-box;
-  }
+}
   
-  html { font-family: "Outfit", sans-serif; }
+html {
+     font-family: "Outfit", sans-serif;
+}
   
-  a { text-decoration: none; }
+a { 
+    text-decoration: none; 
   
-  body {
-    background: var(--oxford-blue);
+}
+  
+body {
+    background: var(--Very-dark-blue-main-BG);
     min-height: 100vh;
     padding: 25px;
-    display:         flex;
+    display: flex;
+    flex-direction: column;
     justify-content: center;
-    align-items:     center;
-  }
+    align-items: center;
+}
   
-  
-  
-  
-  .card {
-    background: var(--light-oxford-blue);
+.card {
+    background: var(--Very-dark-blue-card-BG);
     max-width: 350px;
     padding: 24px;
     border-radius: 15px;
     box-shadow: 0px 20px 25px 15px rgba(0, 0, 0, 0.05),
                 0px 40px 30px 15px rgba(0, 0, 0, 0.1);
-  }
+}
   
-    .card__product-img {
+.card__product-img {
       position: relative;
       border-radius: 8px;
       overflow: hidden;
       cursor: pointer;
-    }
+}
   
-      .card__product-img::after {
-        --aqua: hsla(178, 100%, 50%, 0.5);
+.card__product-img::after {
+        --Cyan: hsla(178, 100%, 50%, 0.5);
   
-        content: url(./images/icon-view.svg);
-        background: var(--aqua);
+        content: url(./imegenes/icon-view.svg);
+        background: var(--Cyan);
         position: absolute;
         inset: 0;
-        display:         flex;
+        display: flex;
         justify-content: center;
-        align-items:     center;
+        align-items: center;
         opacity: 0;
         transition: all 0.25s ease;
-      }
+}
   
-    .card__product-img:hover::after { opacity: 1; }
+.card__product-img:hover::after { 
+  opacity: 1; 
+}
   
-      .card__product-img img {
+.card__product-img img {
         width: 100%;
         display: block;
-      }
+}
   
   
-    .card__body {
+.card__body {
       padding: 23px 0;
-      border-bottom: 1px solid var(--indigo-dye);
+      border-bottom: 1px solid var(--Very-dark-blue-line);
       margin-bottom: 15px;
-    }
+}
   
-      .card__title {
+.card__title {
         color: var(--white);
         font-size: 22px;
         font-weight: 500;
         margin-bottom: 15px;
-      }
+}
   
-      .card__title:hover { color: var(--aqua); }
+.card__title:hover { 
+  color: var(--Cyan);
+}
   
-      .card__text {
-        color: var(--blue-yonder);
+.card__text {
+        color: var(--Soft-blue);
         font-size: 18px;
         line-height: 1.5;
         margin-bottom: 23px;
-      }
+}
   
-      .card__body .wrapper {
-        display:         flex;
+.card__body .wrapper {
+        display: flex;
         justify-content: space-between;
-        align-items:     center;
-      }
+        align-items: center;
+}
   
-      .card__price,
-      .card__countdown {
-        display:     flex;
+.card__price,
+.card__countdown {
+        display: flex;
         align-items: center;
         font-weight: 500;
-      }
+}
   
-      .card__price { color: var(--aqua); }
+.card__price {
+   color: var(--Cyan); 
+}
   
-      .card__icon { margin-right: 6px; }
+.card__icon { 
+  margin-right: 6px; 
+}
   
-      .card__countdown { color: var(--blue-yonder); }
+.card__countdown { 
+  color: var(--Soft-blue); 
+}
   
   
-    .card__footer {
-      display:     flex;
+.card__footer {
+      display: flex;
       align-items: center;
       margin-bottom: 10px;
-    }
+}
   
-      .card__author-img {
+.card__author-img {
         width:  34px;
         height: 34px;
         border: 2px solid var(--white);
         border-radius: 50px;
         margin-right: 15px;
-      }
+}
   
-      .card__author-name {
-        color: var(--blue-yonder);
+.card__author-name {
+        color: var(--Soft-blue);
         font-weight: 500;
-      }
+}
   
-      .card__author-name a {
+.card__author-name a {
         color: var(--white);
         font-weight: 400;
-      }
+}
   
-      .card__author-name a:hover { color: var(--aqua); }
+.card__author-name a:hover { 
+  color: var(--Cyan); 
+}
